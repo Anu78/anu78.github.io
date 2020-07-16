@@ -1,6 +1,6 @@
 #main-section {
   height: 100vh;
-  background: url("https://images.unsplash.com/photo-1453733190371-0a9bedd82893?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=967&q=80")
+  background: url("Backgroundv1.png")
     no-repeat center center fixed;
   /* background: url("http://aktsa.org/images/intro-min.jpeg") no-repeat center center fixed; */
   -webkit-background-size: cover;
@@ -13,6 +13,7 @@
   height: 70vh;
   padding-left: 0px;
   padding-right: 0px;
+  background: url("Backgroundv1.png") no-repeat center center fixed;
 }
 .big-bold-text {
   font-weight: bold;
@@ -35,5 +36,5 @@
 }
 
 footer {
-  background-color: cyan;
+  background: url("Backgroundv1.png") no-repeat center center fixed;
 }

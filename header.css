@@ -9,7 +9,7 @@
   }
   .menu > ol {
     max-width: 1000px;
-    padding: 0 2rem;
+    padding: 0 1rem;
     display: flex;
   }
   .menu > ol > .menu-item {
