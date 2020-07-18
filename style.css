@@ -1,5 +1,5 @@
 #main-section {
-  height: 100vh;
+  height: 88vh;
   background: url("Backgroundv1.png")
     no-repeat center center fixed;
   /* background: url("http://aktsa.org/images/intro-min.jpeg") no-repeat center center fixed; */
@@ -37,13 +37,9 @@
 
 #learn-div,
 #ask-div {
-  height: 70vh;;
+  height: 70vh;
 }
 
 #learn-div {
   border-right: 1px solid black;
-}
-
-footer {
-
 }

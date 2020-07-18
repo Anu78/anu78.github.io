@@ -9,7 +9,7 @@
   }
   .menu > ol {
     max-width: 1000px;
-    padding: 0 1rem;
+    padding: 0 .2rem;
     display: flex;
   }
   .menu > ol > .menu-item {
@@ -46,7 +46,7 @@
   }
   .sub-menu .menu-item {
     padding: 0.75rem 0;
-    background: #052f73;
+    background: black;
     opacity: 0;
     transform-origin: bottom;
     animation: enter 0.2s ease forwards;
@@ -64,7 +64,7 @@
     animation-delay: 0.2s;
   }
   .sub-menu .menu-item:hover {
-    background: #052f73;
+    background: black;
   }
   .sub-menu .menu-item a {
     padding: 0 0.75rem;
@@ -90,31 +90,11 @@
     }
     .menu > ol {
       display: none;
-      background: #f67280;
+      background: black;
       flex-direction: column;
       justify-content: center;
       height: 100vh;
       animation: fade 0.2s ease-out;
-    }
-    .menu > ol > .menu-item {
-      flex: 0;
-      opacity: 0;
-      animation: enter 0.3s ease-out forwards;
-    }
-    .menu > ol > .menu-item:nth-child(1) {
-      animation-delay: 0s;
-    }
-    .menu > ol > .menu-item:nth-child(2) {
-      animation-delay: 0.1s;
-    }
-    .menu > ol > .menu-item:nth-child(3) {
-      animation-delay: 0.2s;
-    }
-    .menu > ol > .menu-item:nth-child(4) {
-      animation-delay: 0.3s;
-    }
-    .menu > ol > .menu-item:nth-child(5) {
-      animation-delay: 0.4s;
     }
     .menu > ol > .menu-item + .menu-item {
       margin-top: 0.75rem;
@@ -126,12 +106,6 @@
     }
     .menu > ol > .menu-item:hover {
       z-index: 1;
-    }
-    .menu:hover > ol {
-      display: flex;
-    }
-    .menu:hover:after {
-      box-shadow: none;
     }
   }
 
@@ -204,4 +178,10 @@
 
   .padding {
     padding: 1%;
+  }
+
+  #farleft {
+    position: absolute;
+    top: 0px;
+    left:10px;
   }
