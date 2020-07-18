@@ -13,7 +13,7 @@
   height: 70vh;
   padding-left: 0px;
   padding-right: 0px;
-  background: url("Backgroundv1.png") no-repeat center center fixed;
+  color: black;
 }
 .big-bold-text {
   font-weight: bold;
@@ -25,10 +25,19 @@
   transform: translate(-50%, -50%);
 }
 
+.learn-ask-text {
+  font-weight: bold;
+  font-size: 50px;
+  position: absolute;
+  color: black;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 #learn-div,
 #ask-div {
-  height: 70vh;
-
+  height: 70vh;;
 }
 
 #learn-div {
@@ -36,5 +45,5 @@
 }
 
 footer {
-  background: url("Backgroundv1.png") no-repeat center center fixed;
+
 }

@@ -1,5 +1,5 @@
 .menu {
-    background: #052f73;
+    background:  black;
     height: 4rem;
   }
   .menu ol {
@@ -24,7 +24,7 @@
     border-radius: 50%;
     bottom: 5px;
     left: calc(50% - 2px);
-    background: #feceab;
+    background:  black;
     will-change: transform;
     transform: scale(0);
     transition: transform 0.2s ease;
@@ -71,7 +71,7 @@
   }
   @media screen and (max-width: 600px) {
     .sub-menu .menu-item {
-      background: #052f73;
+      background: black;
     }
   }
   @media screen and (max-width: 600px) {
@@ -160,7 +160,6 @@
     font-size: 16px;
     font-family: "Fira Mono", monospace;
     margin: 0;
-    background-color: #f67280;
   }
 
   * {
