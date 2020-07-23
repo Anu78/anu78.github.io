@@ -59,3 +59,8 @@ html,body{
   max-height: 100%;
   display: block; /* remove extra space below image */
 }
+
+#lightBar {
+  margin-top: 0px;
+  margin-bottom:0px;
+}

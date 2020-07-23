@@ -1,5 +1,5 @@
 .menu {
-    background:  black;
+    background:  white;
     height: 4rem;
   }
   .menu ol {
@@ -24,7 +24,7 @@
     border-radius: 50%;
     bottom: 5px;
     left: calc(50% - 2px);
-    background:  black;
+    background:  white;
     will-change: transform;
     transform: scale(0);
     transition: transform 0.2s ease;
@@ -46,32 +46,20 @@
   }
   .sub-menu .menu-item {
     padding: 0.75rem 0;
-    background: black;
+    background: white;
     opacity: 0;
     transform-origin: bottom;
     animation: enter 0.2s ease forwards;
   }
-  .sub-menu .menu-item:nth-child(1) {
-    animation-duration: 0.2s;
-    animation-delay: 0s;
-  }
-  .sub-menu .menu-item:nth-child(2) {
-    animation-duration: 0.3s;
-    animation-delay: 0.1s;
-  }
-  .sub-menu .menu-item:nth-child(3) {
-    animation-duration: 0.4s;
-    animation-delay: 0.2s;
-  }
   .sub-menu .menu-item:hover {
-    background: black;
+    background: white;
   }
   .sub-menu .menu-item a {
     padding: 0 0.75rem;
   }
   @media screen and (max-width: 600px) {
     .sub-menu .menu-item {
-      background: black;
+      background: white;
     }
   }
   @media screen and (max-width: 600px) {
@@ -90,7 +78,7 @@
     }
     .menu > ol {
       display: none;
-      background: black;
+      background: white;
       flex-direction: column;
       justify-content: center;
       height: 100vh;
