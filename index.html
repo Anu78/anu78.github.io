@@ -29,7 +29,7 @@
     <nav class="menu">
       <ol>
         <li class="menu-item" id="farleft">
-          <a href="https://think4change.org"><img src="logo.png" width="160" alt="think4change.org"></a>
+          <a href="https://think4change.org"><img src="logo.png" height="45" alt="think4change.org"></a>
         </li>
         <li class="menu-item">
           <a id="menu-math1" href="">Math 1</a>
@@ -42,8 +42,8 @@
             <li class="menu-item"><a href="https://think4change.com/content/math-1/quadratics+factoring">Quadratics and Factoring</a></li>
           </ol>
         </li>
-        <li id="menu-math2" class="menu-item">
-          <a href="">Math 2</a>
+        <li class="menu-item">
+          <a id="menu-math2" href="">Math 2</a>
           <ol class="sub-menu">
             <li class="menu-item"><a href="https://think4change.com/content/math-2/completeSquare">Completing the Square/Complex Numbers</a></li>
             <li class="menu-item"><a href="https://think4change.com/content/math-2/radicals">Radicals</a></li>
@@ -56,8 +56,8 @@
             <li class="menu-item"><a href="https://think4change.com/content/math-2/projectileMotion">Projectile Motion</a></li>
           </ol>
         </li>
-        <li id="menu-math3" class="menu-item">
-          <a href="">Math 3</a>
+        <li class="menu-item">
+          <a id="menu-math3" href="">Math 3</a>
           <ol class="sub-menu">
             <li class="menu-item"><a href="https://think4change.com/content/math-3/polynomials">Polynomials</a></li>
             <li class="menu-item"><a href="https://think4change.com/content/math-3/rationalFuncs">Rational Functions</a></li>
@@ -70,8 +70,8 @@
             <li class="menu-item"><a href="https://think4change.com/content/math-3/circleTheorems">Circle Theorems</a></li>
           </ol>
         </li>
-        <li id="menu-preCalc" class="menu-item">
-          <a href="">Pre Calculus</a>
+        <li class="menu-item">
+          <a id="menu-preCalc" href="">Pre Calculus</a>
           <ol class="sub-menu">
             <li class="menu-item"><a href="https://think4change.com/content/pre-calculus/vectors">Vectors</a></li>
             <li class="menu-item"><a href="https://think4change.com/content/pre-calculus/series+sequences">Series/Sequences</a></li>
@@ -84,8 +84,8 @@
             <li class="menu-item"><a href="https://think4change.com/content/pre-calculus/analyticTrig">Analytic Trignometry</a></li>
           </ol>
         </li>
-        <li id="menu-calculus" class="menu-item">
-          <a href=""> AP Calculus</a>
+        <li class="menu-item">
+          <a id="menu-calculus" href=""> AP Calculus</a>
           <ol class="sub-menu">
             <li class="menu-item"><a href="https://think4change.com/content/ap-calculus/limits+continuity">Limits/Continuity</a></li>
             <li class="menu-item"><a href="https://think4change.com/content/ap-calculus/basicDifferentiation">Basic Differentiation</a></li>
@@ -101,7 +101,7 @@
       </ol>
     </nav>
     <section id="main-section">
-      <hr id="lightBar" style="height:5px;border-width:0;color:red;background-color:red">
+      <hr id="lightBar" style="height:5px;border-width:0;color:black;background-color:black">
       <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner">
           <div class="carousel-item active">
@@ -239,7 +239,35 @@
       integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
       crossorigin="anonymous"
     ></script>
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script src="script.js"></script>
+    <script>
+
+    $("#menu-math1").hover(
+        function () {
+            $("#lightBar").css("background-color", "#90e0ef");
+        }
+    );
+
+    $("#menu-math2").hover(
+        function () {
+            $("#lightBar").css("background-color", "#4acae4");    }
+    );
+
+    $("#menu-math3").hover(
+        function () {
+            $("#lightBar").css("background-color", "#0096c7");    }
+    );
+
+    $("#menu-preCalc").hover(
+        function () {
+            $("#lightBar").css("background-color", "#0077b6");
+        }
+    );
+
+    $("#menu-calculus").hover(
+        function () {
+            $("#lightBar").css("background-color", "#023e8a");
+        }
+    );
+    </script>
   </body>
 </html>
