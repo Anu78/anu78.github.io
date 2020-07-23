@@ -182,6 +182,6 @@
 
   #farleft {
     position: absolute;
-    top: 0px;
+    top:-5px;
     left:10px;
   }
