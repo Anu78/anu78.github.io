@@ -9,6 +9,34 @@
   background-size: cover;
 }
 
+.center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.navbar-nav > li{
+  margin-left:30px;
+  margin-right:30px;
+}
+
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 30px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 50%;
+}
+
+.fa:hover {
+  opacity: 0.7;
+}
+
 #ask-learn-section {
   height: 70vh;
   padding-left: 0px;
@@ -34,7 +62,6 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
-
 #learn-div,
 #ask-div {
   height: 70vh;
@@ -64,4 +91,11 @@ html,body{
 #lightBar {
   margin-top: 0px;
   margin-bottom:0px;
+  color: #023e8a;
 }
+
+.nav-item>a:hover {
+  color: green;
+}
+
+
