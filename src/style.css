@@ -1,0 +1,101 @@
+#main-section {
+  height: 88vh;
+  /* background: url("Backgroundv1.png")
+    no-repeat center center fixed;
+  /* background: url("http://aktsa.org/images/intro-min.jpeg") no-repeat center center fixed; */
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.navbar-nav > li{
+  margin-left:30px;
+  margin-right:30px;
+}
+
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 30px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 50%;
+}
+
+.fa:hover {
+  opacity: 0.7;
+}
+
+#ask-learn-section {
+  height: 70vh;
+  padding-left: 0px;
+  padding-right: 0px;
+  color: black;
+}
+.big-bold-text {
+  font-weight: bold;
+  font-size: 50px;
+  position: absolute;
+  color: white;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.learn-ask-text {
+  font-weight: bold;
+  font-size: 50px;
+  position: absolute;
+  color: black;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#learn-div,
+#ask-div {
+  height: 70vh;
+}
+
+#learn-div {
+  border-right: 1px solid black;
+
+}
+
+html,body{
+  height:100%;
+  color: #f7f0f0;
+}
+.carousel,.item,.active{
+  height:100%;
+}
+.carousel-inner{
+   height:100%;
+}
+.slideshow-image {
+  max-width: 100%;
+  max-height: 100%;
+  display: block; /* remove extra space below image */
+}
+
+#lightBar {
+  margin-top: 0px;
+  margin-bottom:0px;
+  color: #023e8a;
+}
+
+.nav-item>a:hover {
+  color: green;
+}
+
+

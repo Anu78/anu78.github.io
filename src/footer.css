@@ -1,0 +1,15 @@
+footer {
+    background-color: black;
+}
+
+footer a {
+    color: #0096c7;
+}
+
+footer .text-uppercase {
+    color: #023e8a;
+}
+
+.footer-minitext {
+    color: #0096c7;
+}
