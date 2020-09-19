@@ -3,7 +3,7 @@ Copy-Item -Force -Recurse -Verbose "src\*" -Destination "docs"
 cd docs
 ls -include *.html -Recurse | ForEach-Object { ( Get-Content -Path $_.FullName ) -replace '<<header>>', '
 <nav class="navbar navbar-expand-lg navbar-light bg-light" >
-    <a href="https://think4change.org" style="margin-right: 30px"> <img   src="graphics/logo.png" height="45" alt="think4change.org"></a>
+    <a href="https://think4change.org" style="margin-right: 30px"> <img   src="~/graphics/logo.png" height="45" alt="think4change.org"></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -94,7 +94,7 @@ ls -include *.html -Recurse | ForEach-Object { ( Get-Content -Path $_.FullName )
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
             <a class="dropdown-item" href="https://think4change.org/about">About Us</a>
             <a class="dropdown-item" target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLScIMpk_RbYf0b-DJwVyNQLhbZlmV-ZFNpKQgFxeoBEZxDLI3Q/viewform?usp=sf_link">Submit a Question</a>
-            <a class="dropdown-item" href="https://think4change.org/specialEvents">Special Events</a>
+            <a class="dropdown-item" href="https://think4change.org/specialevents">Special Events</a>
           </div>
         </li>
       </ul>
@@ -129,7 +129,7 @@ ls -include *.html -Recurse | ForEach-Object { ( Get-Content -Path $_.FullName )
                 <a style="color: #0096c7;" href="#!">Classes Overview</a>
               </li>
               <li>
-                <a style="color: #0096c7;" href="https://think4change.org/specialEvents">Special Events</a>
+                <a style="color: #0096c7;" href="https://think4change.org/specialevents">Special Events</a>
               </li>
               <li>
                 Icons provided by Font Awesome.<br><a style="color: #0096c7;" href="https://fontawesome.com/license">Link to Pro License</a>
