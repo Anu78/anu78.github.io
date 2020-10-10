@@ -42,6 +42,7 @@
   padding-left: 0px;
   padding-right: 0px;
   color: black;
+  background-color: #99d9ea;
 }
 .big-bold-text {
   font-weight: bold;
@@ -54,22 +55,20 @@
 }
 
 .learn-ask-text {
-  font-weight: bold;
   font-size: 50px;
   position: absolute;
   color: black;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  border-radius: 25px;
+  border: 2px solid black;
+  width: 40%;
+  padding: 30px;
 }
 #learn-div,
 #ask-div {
-  height: 70vh;
-}
-
-#learn-div {
-  border-right: 1px solid black;
-
+  height: 50vh;
 }
 
 html,body{

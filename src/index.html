@@ -31,10 +31,10 @@
       <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner">
           <div class="carousel-item active">
-            <img class="d-block w-100 slideshow-image"  src="/graphics/intro-to-calc-banner.svg" alt="First slide">
+            <img class="d-block w-100 slideshow-image"  src="graphics/intro-to-calc-banner.svg" alt="First slide">
           </div>
           <div class="carousel-item">
-            <img class="d-block w-100" src="/graphics/math-for-you-graphic.svg" alt="Second slide">
+            <img class="d-block w-100" src="graphics/math-for-you-graphic.svg" alt="Second slide">
           </div>
         </div>
         <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
@@ -49,26 +49,32 @@
     </section>
 
     <section id="ask-learn-section">
-      <div class="container-fluid padding">
+      <div class="container-fluid padding" style="padding-left:3%; padding-right:3%;">
+        <center><br><br> <h1>We have 3 main services.</h1></center>
         <div class="row">
-          <div class="col-sm" id="learn-div">
+          <div onclick="location.href='https://think4change.org/table-of-contents';" style="cursor: pointer;" class="col-sm" id="learn-div">
             <center class="learn-ask-text">
-              <img src="https://img.icons8.com/ios/100/000000/book.png" />
+              <img width="100px" src="https://freesvg.org/img/Book_thick_generic.png" />
+              <br />Content
               <br />
-              Learn
-              <br />
-              <a class="btn btn-outline-primary" href="https://think4change.org/specialEvents" role="button">View Events</a>
             </center>
           </div>
-          <div class="col-sm" id="ask-div">
+          <div onclick="location.href='https://docs.google.com/forms/d/e/1FAIpQLScIMpk_RbYf0b-DJwVyNQLhbZlmV-ZFNpKQgFxeoBEZxDLI3Q/viewform?usp=sf_link';" style="cursor: pointer;" class="col-sm" id="ask-div">
             <center class="learn-ask-text">
-              <img
-                src="https://img.icons8.com/ios/100/000000/ask-question.png"
+              <img width="100px"
+                src="https://www.flaticon.com/svg/static/icons/svg/71/71768.svg"
               />
               <br />
-              Ask
+              Q & A
               <br />
-              <a class="btn btn-outline-primary" href="https://docs.google.com/forms/d/e/1FAIpQLScIMpk_RbYf0b-DJwVyNQLhbZlmV-ZFNpKQgFxeoBEZxDLI3Q/viewform?usp=sf_link" role="button">Submit</a>
+            </center>
+          </div>
+          <div onclick="location.href='https://think4change.org/specialEvents';" style="cursor: pointer;" class="col-sm" id="event-div">
+            <center class="learn-ask-text">
+              <img width="100px"src="https://www.svgrepo.com/show/140516/play-button.svg" />
+              <br />
+              Events
+              <br />
             </center>
           </div>
         </div>
