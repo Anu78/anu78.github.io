@@ -110,7 +110,7 @@ ls -include *.html -Recurse | ForEach-Object { ( Get-Content -Path $_.FullName )
 
           <div class="col-md-6 mt-md-0 mt-3">
 
-            <h5 class="text-uppercase">need new colors</h5>
+            <h5 class="text-uppercase">Think4Change</h5>
             <p style="color: #0096c7;" class="footer-minitext">put something here soon.</p>
 
           </div>
@@ -123,10 +123,10 @@ ls -include *.html -Recurse | ForEach-Object { ( Get-Content -Path $_.FullName )
 
             <ul class="list-unstyled">
               <li>
-                <a href="#!" style="color: #0096c7;" >Submit Question</a>
+                <a href="#!" style="color: #0096c7;" >Submit A Question</a>
               </li>
               <li>
-                <a style="color: #0096c7;" href="#!">Classes Overview</a>
+                <a style="color: #0096c7;" href="https://think4change.org/table-of-contents">Classes Overview</a>
               </li>
               <li>
                 <a style="color: #0096c7;" href="https://think4change.org/specialevents">Special Events</a>
@@ -149,10 +149,10 @@ ls -include *.html -Recurse | ForEach-Object { ( Get-Content -Path $_.FullName )
                 <a style="color: #0096c7;" href="mailto:officialt4c@gmail.com">Email us</a>
               </li>
               <li>
-                <a style="color: #0096c7;" href="#!">Add more here</a>
+                <a style="color: #0096c7;" href="https://twitter.com/officialt4c">Twitter</a>
               </li>
               <li>
-                <a style="color: #0096c7;" href="#!">Add more here</a>
+                <a style="color: #0096c7;" href="https://www.youtube.com/channel/UCOQtOvZGzU2nWKl29f_IjEw">YouTube</a>
               </li>
             </ul>
 
@@ -163,7 +163,7 @@ ls -include *.html -Recurse | ForEach-Object { ( Get-Content -Path $_.FullName )
       </div>
 
       <div class="footer-copyright text-center py-3">© 2020 Copyright:
-        <a style="color: #0096c7;" href="https://think4change.org"> think4change.org</a>
+        <a style="color: #0096c7;" href="https://think4change.org">think4change.org</a>
       </div>
     </footer>
 ' | Set-Content $_.fullname }
