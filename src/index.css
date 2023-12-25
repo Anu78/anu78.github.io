@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Work+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600&display=swap');
 
 body {
   margin: 0;
@@ -10,4 +10,7 @@ body {
   height: 100vh;
   margin: 0;
   padding: 0;
+  display: flex;
+  flex-grow: 1;
+  overflow: hidden;
 }
