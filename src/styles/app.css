@@ -1,88 +1,96 @@
 .main-content {
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
 }
 
 .top {
-    height: 100vh;
-    width: 100vw;
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 .return-start {
-    display: flex;
-    flex-direction: row;
-    position: fixed;
-    right: 2%;
-    bottom: 2%;
-    gap: 2vh;
+  display: flex;
+  flex-direction: row;
+  position: fixed;
+  right: 2%;
+  bottom: 2%;
+  gap: 2vh;
 }
 
 .nav-overlay {
-    display: flex;
-    flex-direction: row;
-    gap: 3vh;
-    border-radius: 5%;
-    padding-left: 2%;
-    padding-right: 2%;
+  display: flex;
+  flex-direction: row;
+  gap: 3vh;
+  border-radius: 5%;
+  padding-left: 2%;
+  padding-right: 2%;
+
 }
 
 .expand-left {
-    display: flex;
-    gap: 3vh;
+  display: flex;
+  gap: 3vh;
 }
 .nav-item {
-    cursor: pointer;
-    font-size: 17px;
-    font-weight: 600;
-    color: rgb(209, 108, 203);
+  cursor: pointer;
+  font-size: 17px;
+  font-weight: 600;
+  color: rgb(209, 108, 203);
+  transition: color 1.5s ease-in;
 }
 
-.nav-selected {
-    text-decoration: underline;
+@property --gradient-colors {
+  syntax: '<color>#';
+  inherits: false;
+  initial-value: #513B56, #444360, #2B748C, #3FCA8C, #ABE166;
 }
 
 .glowing-background {
-    position: fixed;
-    top:0;
-    left:0;
-    width: 100vw;
-    height: 100vh;
-    background: linear-gradient(45deg, #456458, #4040c5);
-    overflow: hidden;
-    z-index: -1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(45deg, var(--gradient-colors));
+  overflow: hidden;
+  z-index: -1;
+  animation: gradientColors 33s ease infinite alternate;
+}
+
+.glowing-background::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(https://images.unsplash.com/photo-1596865249308-2472dc5807d7?q=80&w=1806&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+  opacity: 0.4; 
+  pointer-events: none;
+}
+
+.nav-item.selected {
+  color: black;
+}
+
+@keyframes gradientColors {
+  0%, 10% {
+    --gradient-colors: #513B56, #444360, #2B748C, #3FCA8C, #ABE166;
   }
-  
-  .glowing-background::before,
-  .glowing-background::after {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 200px;
-    height: 200px;
-    background: radial-gradient(circle, rgba(139, 0, 139, 0.6) 0%, transparent 70%);
-    border-radius: 50%;
-    transform: translate(-50%, -50%);
-    animation: glow 5s infinite alternate ease-in-out;
+  25%, 35% {
+    --gradient-colors: #444360, #2B748C, #3FCA8C, #ABE166, #513B56;
   }
-  
-  .glowing-background::after {
-    background: radial-gradient(circle, rgba(0, 14, 71, 0.6) 0%, transparent 70%);
-    animation-delay: -2.5s;
+  50%, 60% {
+    --gradient-colors: #2B748C, #3FCA8C, #ABE166, #513B56, #444360;
   }
-  
-  @keyframes glow {
-    0%, 100% {
-      transform: translate(-50%, -50%) scale(1);
-      opacity: 0.7;
-    }
-    50% {
-      transform: translate(-50%, -50%) scale(1.5);
-      opacity: 1;
-    }
+  75%, 85% {
+    --gradient-colors: #3FCA8C, #ABE166, #513B56, #444360, #2B748C;
   }
-  
+  90%, 100% {
+    --gradient-colors: #ABE166, #513B56, #444360, #2B748C, #3FCA8C;
+  }
+}

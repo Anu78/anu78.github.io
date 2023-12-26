@@ -1,0 +1,101 @@
+.projects-container {
+    display: flex; 
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+}
+
+.headers {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 10%;
+}
+
+#project-heading {
+    text-align: center;
+    height: fit-content;
+}
+
+.projects-list {
+    display: flex;
+    scrollbar-width: none;
+    align-items: center;
+    height: 90vh;
+    width: max-content;
+    justify-content: center;
+    overflow-x: scroll;
+    white-space: nowrap;
+    padding-left: 2%;
+}
+
+.projects-list::-webkit-scrollbar {
+    display: none; /* For Chrome, Safari, and Opera */
+  }
+
+.outer-card {
+    display: flex; 
+    flex: 0 0 auto;
+    white-space: nowrap;
+    flex-direction: column;
+    backdrop-filter:blur(10px);
+    border: 1px solid rgba(255,255,255,0.3);
+    background-color: rgba(255, 255, 255, 0.2);
+    transition: transform 0.6s ease, box-shadow 0.6s ease;
+    transform: scale(0.8);
+}
+
+.card-languages {
+    display: flex;
+    align-items: baseline;
+    gap: 2%;
+}
+
+.card-learn-more {
+    display: flex;
+    gap: 5%;
+    justify-content: space-between;
+    align-items: center;
+}
+.card-learn-more span {
+    margin-left: auto;
+}
+
+.language-box {
+    border: 2px solid black;
+    padding: 1%;
+    border-radius: 10%;
+}
+
+.language-box.react {
+    background: red;
+}
+
+.language-box.javascript {
+    background: peru;
+}
+.language-box.css {
+    background: lightblue;
+}
+.outer-card > *:not(:first-child) {
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-bottom: 2%;
+}
+.card-learn-more > *:not(span) {
+    border: 2px solid pink;
+    padding: 1%;
+    border-radius: 5%;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.projects-list .outer-card:hover {
+    transform: scale(1);
+    box-shadow: 1px 1px 0px #999,
+                2px 2px 0px #999,
+                3px 3px 0px #999,
+                4px 4px 0px #999,
+                5px 5px 0px #999,
+                6px 6px 0px #999;
+}

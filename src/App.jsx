@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useHotkeys } from "react-hotkeys-hook";
-import ParticlesBackground from "./components/Particles";
 import Projects from "./components/Projects";
 import About from "./components/About";
 import Blog from "./components/Blog";
@@ -9,52 +8,53 @@ import Intro from "./components/Intro";
 import "./styles/app.css";
 
 export default function App() {
-  const [page, setPage] = useState(1);
-  const [prevPage, setPrevPage] = useState(1);
+  const [page, setPage] = useState(0);
+  const [prevPage, setPrevPage] = useState(0);
   const [introAnimated, setIntroAnimated] = useState(false);
 
-  function ReturnToStart() {
+  const parentVariants = {
+    hidden: { opacity: 0, x: 200, y: 200 },
+    visible: {
+      opacity: 1,
+      x: 0,
+      y: 0,
+      transition: {
+        when: "beforeChildren",
+        staggerChildren: 0.6,
+      },
+    },
+  };
 
+  const childVariants = {
+    hidden: { opacity: 0 },
+    visible: { opacity: 1 },
+  };
+
+  function ReturnToStart() {
+    const pages = ["Start", "About", "Projects", "Blog"];
     return (
       <div className="return-start">
-        <div className="nav-overlay">
-          <p
-            onClick={() => {
-              setPrevPage(page);
-              setPage(0);
-            }}
-            className={`nav-item ${page === 0 ? 'nav-selected': ''}`}
-          >
-            Start
-          </p>
-          <p
-            onClick={() => {
-              setPrevPage(page);
-              setPage(1);
-            }}
-            className={`nav-item ${page === 1 ? 'nav-selected': ''}`}
-          >
-            About
-          </p>
-          <p
-            onClick={() => {
-              setPrevPage(page);
-              setPage(2);
-            }}
-            className={`nav-item ${page === 2 ? 'nav-selected': ''}`}
-          >
-            Projects
-          </p>
-          <p
-            onClick={() => {
-              setPrevPage(page);
-              setPage(3);
-            }}
-            className={`nav-item ${page === 3 ? 'nav-selected': ''}`}
-          >
-            Blog
-          </p>
-        </div>
+        <motion.div
+          variants={parentVariants}
+          initial="hidden"
+          animate="visible"
+          transition={{ delay: 0.5 }}
+          className="nav-overlay"
+        >
+          {pages.map((label, index) => (
+            <motion.div
+              key={index}
+              variants={childVariants}
+              onClick={() => {
+                setPrevPage(page);
+                setPage(index);
+              }}
+              className={`nav-item ${page === index && "selected"}`}
+            >
+              {label}
+            </motion.div>
+          ))}
+        </motion.div>
       </div>
     );
   }
@@ -63,7 +63,6 @@ export default function App() {
     setPrevPage(page);
 
     if (page + dir <= pageLimit && page + dir >= 0) {
-
       setPage(page + dir);
     }
   };
@@ -83,7 +82,6 @@ export default function App() {
 
   const pageLimit = 3;
 
-
   useHotkeys(
     "left",
     () => {
@@ -100,14 +98,10 @@ export default function App() {
   );
   return (
     <AnimatePresence layout wait>
-      <div 
-      key={page}
-      className="glowing-background"></div>
-      <div
-        className="main-content"
-      >
+      <div key={-1} className="glowing-background"></div>
+      <div className="main-content">
         <motion.div
-          key={page*2}
+          key={page}
           initial={{
             x: animationDirection ? "100vw" : "-100vw",
           }}
@@ -118,10 +112,16 @@ export default function App() {
             x: animationDirection ? "-100vw" : "100vw",
           }}
           transition={{ duration: 0.85, ease: "circInOut" }}
-          onWheel={handleWheel}
+          // onWheel={handleWheel}
         >
           <div className="top">
-            {page === 0 && <Intro pageChange={handlePageChange} introAnimated={introAnimated} setIntroAnimated={setIntroAnimated} />}
+            {page === 0 && (
+              <Intro
+                pageChange={handlePageChange}
+                introAnimated={introAnimated}
+                setIntroAnimated={setIntroAnimated}
+              />
+            )}
             {page === 1 && <About />}
             {page === 2 && <Projects />}
             {page === 3 && <Blog />}
