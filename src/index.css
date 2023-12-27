@@ -1,12 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Broken+Fax&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&display=swap');
 body {
   margin: 0;
   padding: 0;
 }
 
 #root {
-  font-family: "Work Sans";
+  font-family: "JetBrains Mono";
   height: 100vh;
   margin: 0;
   padding: 0;

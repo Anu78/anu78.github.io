@@ -1,8 +1,6 @@
 import "../styles/projects.css";
 import { IoMdMore } from "react-icons/io";
-import { FaExternalLinkAlt } from "react-icons/fa";
 import { motion } from "framer-motion";
-import { useRef, useState, useEffect } from "react";
 export default function Projects() {
   const projects = [
     {
@@ -10,7 +8,8 @@ export default function Projects() {
       languages: ["React", "CSS"],
       image: "/sudoku.png",
       githubLink: "https://github.com/Anu78/sudoku",
-      blogId: 1,
+      blogId: -1,
+      description: "A simple sudoku solver and player."
     },
     {
       title: "Canvas Discord Bot",
@@ -18,13 +17,15 @@ export default function Projects() {
       image: "/sudoku.png",
       githubLink: "https://github.com/Anu78/new-canvas-bot",
       blogId: 2,
+      description: "A discord bot that encourages collaboration and brings students together."
     },
     {
       title: "GeoGuessr AI",
       languages: ["Python", "PyTorch"],
-      image: "/sudoku.png",
+      image: "/geoguessr_game.png",
       githubLink: "https://github.com/Anu78/intro-to-ml-hw/tree/main/project",
       blogId: 3,
+      description: "Predicting locations in the US within 100 miles."
     },
     {
       title: "Mom's Inventory Management",
@@ -32,22 +33,31 @@ export default function Projects() {
       image: "/sudoku.png",
       githubLink: "https://github.com/Anu78/sudoku", //. add link later
       blogId: 4,
+      description: "A web app to keep track of Mom's groceries."
+    },
+    {
+      title: "C++ Data Structures",
+      languages: ["C++"],
+      image: "/leetcode_stats.png",
+      githubLink: "https://github.com/Anu78/C-Data-Structures-Algorithms", //. add link later
+      blogId: -1,
+      description: "Simple DSA Concepts in C++."
     },
   ];
 
-  function ProjectCard({ title, languages, image, githubLink, blogId }) {
-
+  function ProjectCard({ title, languages, image, githubLink, blogId, description }) {
+    
     return (
       <div className="outer-card">
         <div className="card-img">
-          <img draggable="false" width={500} src={image} />
+          <img draggable="false" width={550} src={image} />
         </div>
         <div className="card-languages">
           {/* array map here */}
           {languages.map((language, index) => (
             <div
               key={index}
-              className={`language-box ${language.toLowerCase()}`}
+              className={`language-box ${language.toLowerCase() === "c++" ? "cpp" : language.toLowerCase()}`}
             >
               {language}
             </div>
@@ -55,15 +65,14 @@ export default function Projects() {
         </div>
         <div className="short-desc">
           <h3>{title}</h3>
+          <p>{description}</p>
         </div>
         <div className="card-learn-more">
           <a target="_blank" href={githubLink}>
             View on GitHub
-            <span>
-              <FaExternalLinkAlt />
-            </span>
           </a>
-          <div>See blog post {blogId}</div>
+          {blogId > 0 ? <div>See blog post</div> : ""}
+
           <span>
             <IoMdMore size={25} />
           </span>
@@ -74,7 +83,7 @@ export default function Projects() {
 
   const carouselSettings = {
     drag: "x",
-    dragConstraints: { left: -1000, right: 0 },
+    dragConstraints: { left: -1500, right: 0 },
   };
 
   return (

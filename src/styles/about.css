@@ -1,7 +1,7 @@
 .typed-text {
-  font-size: 30px;
-  font-weight: bold;
+  font-size: 40px;
   text-align: center;
+  font-family: "Rubik Broken Fax";
 }
 
 .about-container {
@@ -14,7 +14,7 @@
   font-size: 21px;
   margin-left: 15%;
   margin-right: 15%;
-  line-height: 170%;
+  line-height: 200%;
 }
 
 .left-about {
@@ -29,13 +29,13 @@
 @property --color-1 {
   syntax: "<color>";
   inherits: false;
-  initial-value: rgb(200, 53, 200);
+  initial-value: rgb(220, 139, 220);
 }
 
 @property --color-2 {
   syntax: "<color>";
   inherits: false;
-  initial-value: rgb(113, 65, 73);
+  initial-value: rgb(211, 72, 95);
 }
 
 .links {
@@ -61,8 +61,8 @@
 }
 
 .links:hover {
-  --color-1: rgb(177, 193, 76);
-  --color-2: rgb(28, 89, 89);
+  --color-1: rgb(221, 236, 124);
+  --color-2: rgb(112, 221, 221);
 }
 
 .link:visited {

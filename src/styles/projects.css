@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 .projects-container {
     display: flex; 
     flex-direction: column;
@@ -25,7 +29,7 @@
     width: max-content;
     justify-content: center;
     overflow-x: scroll;
-    white-space: nowrap;
+    white-space: normal;
     padding-left: 2%;
 }
 
@@ -35,15 +39,19 @@
 
 .outer-card {
     display: flex; 
-    flex: 0 0 auto;
-    white-space: nowrap;
+    flex: 0 1 auto;
     flex-direction: column;
     backdrop-filter:blur(10px);
     border: 1px solid rgba(255,255,255,0.3);
     background-color: rgba(255, 255, 255, 0.2);
     transition: transform 0.6s ease, box-shadow 0.6s ease;
     transform: scale(0.8);
+    max-width: 550px;
 }
+
+.outer-card > * {
+    max-width: 100%;
+  }
 
 .card-languages {
     display: flex;
@@ -53,7 +61,7 @@
 
 .card-learn-more {
     display: flex;
-    gap: 5%;
+    gap: 2vh;
     justify-content: space-between;
     align-items: center;
 }
@@ -67,6 +75,18 @@
     border-radius: 10%;
 }
 
+.short-desc {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    white-space: normal;
+    overflow: hidden;
+  }
+
+.short-desc p {
+    word-wrap: break-word;
+} 
+
 .language-box.react {
     background: red;
 }
@@ -76,6 +96,21 @@
 }
 .language-box.css {
     background: lightblue;
+}
+.language-box.python {
+    background-color: blue;
+}
+.language-box.pytorch {
+    background-color: orange;
+}
+.language-box.go {
+    background-color: lightcoral;
+}
+.language-box.mongodb {
+    background-color: aqua;
+}
+.language-box.cpp {
+    background-color: limegreen;
 }
 .outer-card > *:not(:first-child) {
     margin-left: 2%;

@@ -127,8 +127,8 @@ export default function App() {
             {page === 3 && <Blog />}
           </div>
         </motion.div>
-        <ReturnToStart />
       </div>
+        <ReturnToStart key={-3}/>
     </AnimatePresence>
   );
 }

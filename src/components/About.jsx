@@ -103,6 +103,16 @@ export default function About() {
             </span>
             Resumé
           </a>
+          <a
+            target="_blank"
+            href="https://last.fm/user/boop_png"
+            className="link"
+          >
+            <span>
+              <img src="/last_fm.svg" width={25}/>
+            </span>
+            last.fm
+          </a>
         </motion.div>
       </div>
       <motion.div className="photo-walls">
